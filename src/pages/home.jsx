@@ -6,9 +6,6 @@ import {
   Card,
   CardBody,
   CardHeader,
-  Checkbox,
-  Input,
-  Textarea,
   Typography
 } from "@material-tailwind/react";
 import React, { useEffect, useState } from "react";
@@ -44,7 +41,7 @@ export function Home() {
             style={{ backgroundImage: `url(${background})` }}
           />
         ))}
-        <div className="absolute top-0 h-full w-full bg-gray-800/70" />
+        <div className="absolute top-0 h-full w-full bg-gray-900/70" />
 
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
@@ -188,7 +185,7 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section className="relative bg-white py-3 px-4">
+      <section className="relative bg-gray-300 py-3 px-4">
         <div className="container mx-auto">
           <PageTitle section="Our Services" heading="Fostering Growth">
             At APSEDEC, we are committed to fostering economic growth and development
@@ -197,11 +194,11 @@ export function Home() {
             promote financial inclusivity, and empower vulnerable communities towards sustainable
             livelihoods.
           </PageTitle>
-          <div className="mx-auto mt-20 mb-20 grid max-w-7xl grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-20 mb-20 grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
             {contactData.map(({ title, icon, description }) => (
               <Card
                 color="transparent"
-                className="mt-6 w-96 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+                className="bg-white mt-6 w-96 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
               >
                 <CardBody>
                   <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-green-700 shadow-lg hover:bg-green-600 shadow-gray-500/20">
@@ -241,7 +238,7 @@ export function Home() {
               </Card>
             ))}
           </div>
-          <PageTitle section="Contact Us" heading="Want to work with us?">
+          {/* <PageTitle section="Contact Us" heading="Want to work with us?">
             Complete this form and we will get back to you in 24 hours.
           </PageTitle>
           <form className="mx-auto w-full mt-12 lg:w-5/12">
@@ -271,10 +268,10 @@ export function Home() {
             <Button variant="filled" size="lg" className="mt-8 bg-green-800" fullWidth>
               Send Message
             </Button>
-          </form>
+          </form> */}
         </div>
       </section>
-      <div className="bg-white">
+      <div className="bg-black">
         <Footer />
       </div>
     </>

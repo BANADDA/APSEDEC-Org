@@ -8,12 +8,11 @@ export function Footer({ title, description, socials, menus, copyright }) {
     <footer className="relative px-4 pt-8 pb-6">
       <div className="container mx-auto">
         <div className="flex flex-wrap pt-6 text-center lg:text-left">
-          <div className="w-full px-4 lg:w-6/12">
-            <Typography variant="h4" className="mb-4" color="blue-gray">
+          <div className="w-full px-4 lg:w-3/12">
+            <Typography variant="h4" className="mb-4" color="white">
               {title}
             </Typography>
-            <hr className="pr-8"/>
-            <Typography className="font-normal text-blue-gray-500 lg:w-2/5">
+            <Typography className="font-normal text-blue-gray-200">
               {description}
             </Typography>
             <div className="mx-auto mt-6 mb-8 flex justify-center gap-2 md:mb-0 lg:justify-start">
@@ -24,7 +23,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <IconButton color="white" className="rounded-full shadow-none bg-transparent">
+                  <IconButton color="white" className="rounded-full">
                     <Typography color={color}>
                       <i className={`fa-brands fa-${name}`} />
                     </Typography>
@@ -33,12 +32,12 @@ export function Footer({ title, description, socials, menus, copyright }) {
               ))}
             </div>
           </div>
-          <div className="mx-auto mt-12 grid w-max grid-cols-2 gap-24 lg:mt-0">
+          <div className="mx-auto mt-12 grid w-max grid-cols-2 gap-35 lg:mt-0">
             {menus.map(({ name, items }) => (
               <div key={name}>
                 <Typography
                   variant="small"
-                  color="blue-gray"
+                  color="white"
                   className="mb-2 block font-medium uppercase"
                 >
                   {name}
@@ -49,10 +48,10 @@ export function Footer({ title, description, socials, menus, copyright }) {
                       <Typography
                         as="a"
                         href={item.path}
-                        target="_blank"
+                        target={item.target}
                         rel="noreferrer"
                         variant="small"
-                        className="mb-2 block font-normal text-blue-gray-500 hover:text-blue-gray-700"
+                        className="mb-2 block font-normal text-blue-gray-100 hover:text-blue-gray-300"
                       >
                         {item.name}
                       </Typography>
@@ -63,12 +62,12 @@ export function Footer({ title, description, socials, menus, copyright }) {
             ))}
           </div>
         </div>
-        <hr className="my-6 border-gray-300" />
+        <hr className="my-6 border-gray-200" />
         <div className="flex flex-wrap items-center justify-center md:justify-between">
           <div className="mx-auto w-full px-4 text-center">
             <Typography
               variant="small"
-              className="font-normal text-blue-gray-500"
+              className="font-normal text-blue-gray-300"
             >
               {copyright}
             </Typography>
@@ -80,67 +79,87 @@ export function Footer({ title, description, socials, menus, copyright }) {
 }
 
 Footer.defaultProps = {
-  title: "APSEDEC.",
-  // description:
-  //   "Easy to use React components for Tailwind CSS and Material Design.",
+  title: "ACHOLI PRIVATE SECTOR DEVELOPMENT COMPANY LIMITED",
+  description:
+    "Fostering Growth for local communities.",
   socials: [
     {
-      color: "gray",
+      color: "blue",
+      name: "facebook",
+      // path: "https://www.facebook.com/CreativeTim",
+    },
+    {
+      color: "light-blue",
       name: "twitter",
-      path: "#",
+      // path: "https://www.twitter.com/creativetim",
     },
     {
-      color: "gray",
-      name: "youtube",
-      path: "#",
-    },
-    {
-      color: "gray",
+      color: "purple",
       name: "instagram",
-      path: "#",
+      // path: "https://www.instagram.com/creativetimofficial/",
     },
+    // {
+    //   color: "pink",
+    //   name: "dribbble",
+    //   path: "https://www.dribbble.com/creativetim",
+    // },
     {
-      color: "black",
-      name: "github",
-      path: "#",
+      color: "red",
+      name: "youtube",
+      // path: "",
     },
+    // {
+    //   color: "black",
+    //   name: "github",
+    //   path: "https://github.com/creativetimofficial/material-tailwind",
+    // },
   ],
   menus: [
     {
-      name: "useful links",
+      name: "Useful Links",
       items: [
-        { name: "About Us", path: "#" },
-        { name: "Our Team", path: "#" },
+        { name: "About Us", path: "/about-us" },
+        // { name: "Blog", path: "/" },
         {
-          name: "Programs & Projects",
-          path: "#",
+          name: "Our Programs",
+          path: "/profile",
         },
+        {
+          name: "Contact Us",
+          path: "/contact",
+        },
+        // {
+        //   name: "Free Products",
+        //   path: "https://www.creative-tim.com/templates/free?ref=mtk",
+        // },
       ],
     },
     {
-      name: "other resources",
+      name: "Get In Touch",
       items: [
         {
-          name: "Contact Us",
-          path: "#",
+          name: "P.O. Box: 374, Kitgum,  Uganda",
+          // path: "/",
+          // path: "https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk",
         },
         {
-          name: "News & Projects",
-          path: "#",
+          name: "EMAIL :  apsedec2006@yahoo.co.uk",
+          path: "apsedec2006@yahoo.co.uk",
+        },
+        // {
+        //   name: "Change Log",
+        //   path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CHANGELOG.md?ref=mtk",
+        // },
+        {
+          name: "CALL: +256 777 4505904",
+          // path: "/",
         },
       ],
     },
   ],
   copyright: (
     <>
-      Copyright © {year} APSEDEC by{" "}
-      <a
-        href="#"
-        target="_blank"
-        className="text-blue-gray-500 transition-colors hover:text-blue-500"
-      >
-        Mubaraka Banadda
-      </a>
+      Copyright © {year} APSEDEC
       .
     </>
   ),
