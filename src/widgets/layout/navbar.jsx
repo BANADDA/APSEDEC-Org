@@ -28,7 +28,7 @@ export function Navbar({ logo, brandName1, brandName2, brandName3, brandName4, b
           as="li"
           variant="small"
           color="inherit"
-          className="capitalize hover:text-red-700 font-semibold text-base"
+          className="capitalize hover:text-green-700 font-semibold text-base"
         >
           {href ? (
             <a
@@ -87,8 +87,8 @@ export function Navbar({ logo, brandName1, brandName2, brandName3, brandName4, b
         <IconButton
           variant="text"
           size="lg"
-          color="red"
-          className="ml-auto text-inherit hover:bg-red-700 focus:bg-red-700 active:bg-red-700  lg:hidden"
+          color="green"
+          className="ml-auto text-inherit hover:bg-green-700 focus:bg-green-700 active:bg-green-700  lg:hidden"
           onClick={() => setOpenNav(!openNav)}
         >
           {openNav ? (
@@ -99,7 +99,7 @@ export function Navbar({ logo, brandName1, brandName2, brandName3, brandName4, b
         </IconButton>
       </div>
       <MobileNav
-        className="rounded-xl bg-white px-4 pt-2 pb-4 text-red-400"
+        className="rounded-xl bg-white px-4 pt-2 pb-4 text-green-400"
         open={openNav}
       >
         <div className="container mx-auto">
@@ -141,7 +141,7 @@ Navbar.defaultProps = {
       to="/"
       target=""
     >
-      <Button className=" from-red-800 to-red-800 shadow-md shadow-red-800/20 hover:shadow-lg hover:shadow-red-700/40 active:opacity-[0.85] block w-full" variant="gradient" size="sm" fullWidth>
+      <Button className=" from-green-800 to-green-800 shadow-md shadow-green-800/20 hover:shadow-lg hover:shadow-green-700/40 active:opacity-[0.85] block w-full" variant="gradient" size="sm" fullWidth>
       Contact Us
     </Button>
     </Link>
@@ -150,7 +150,7 @@ Navbar.defaultProps = {
 
 Navbar.propTypes = {
   brandName: PropTypes.string,
-  routes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  routes: PropTypes.arrayOf(PropTypes.object).isRequigreen,
   action: PropTypes.node,
 };
 

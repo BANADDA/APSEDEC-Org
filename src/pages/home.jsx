@@ -7,7 +7,6 @@ import {
   CardBody,
   CardHeader,
   Checkbox,
-  IconButton,
   Input,
   Textarea,
   Typography
@@ -54,10 +53,10 @@ export function Home() {
                 variant="h1"
                 className="mb-6 font-black text-gray-300"
               >
-                ACHOLI <span className={styled["home-span"]}>PRIVATE</span>{" "}
+                ACHOLI <span className="text-green-500">PRIVATE</span>{" "}
                 SECTOR DEVELOPMENT COMPANY LIMITED.
                 <br />
-                (APSEDEC)
+                (<span className="text-green-500" style={{ textDecoration: 'underline' }}>APSEDEC</span>)
               </Typography>
               <Typography
                 variant="lead"
@@ -71,7 +70,7 @@ export function Home() {
                 us in building a brighter future for all
               </Typography>
 
-              <div className=" flex items-center justify-center gap-5 pt-20">
+              {/* <div className=" flex items-center justify-center gap-5 pt-20">
                 <IconButton color="blue" variant="text">
                   <i className={`fa-brands fa-facebook text-4xl`} />
                 </IconButton>
@@ -81,15 +80,15 @@ export function Home() {
                 <IconButton color="pink" variant="text">
                   <i className={`fa-brands fa-instagram text-4xl`} />
                 </IconButton>
-                <IconButton color="red" variant="text">
+                <IconButton color="green" variant="text">
                   <i className={`fa-brands fa-youtube text-4xl`} />
                 </IconButton>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </div>
-      <section className="-mt-32 bg-white px-4 pb-20 pt-4">
+      <section className="-mt-32 bg-gray-200 px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map(({ color, title, icon, description }) => (
@@ -106,7 +105,7 @@ export function Home() {
           </div>
           <div className="mt-32 flex flex-wrap items-center">
             <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-red-600 p-2 text-center shadow-lg">
+              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-green-600 p-2 text-center shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="text-white w-6 h-6">
                   <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" />
                 </svg>
@@ -124,7 +123,7 @@ export function Home() {
                 of the private sector.
                 <br />
                 <br />
-                Our focus is on reducing poverty, enhancing income generation,
+                Our focus is on greenucing poverty, enhancing income generation,
                 and ensuring sustainable livelihoods through various programs including financial
                 inclusion, agricultural productivity improvement, and youth empowerment.
                 Collaborating with government bodies, international donors, and communities, we aim
@@ -133,7 +132,7 @@ export function Home() {
               <Link to="/">
                 <Button
                   variant="outlined"
-                  className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white focus:ring-gray-200"
+                  className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white focus:ring-gray-200"
                 >
                   Read More
                 </Button>

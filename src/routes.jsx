@@ -2,8 +2,7 @@ import { Home } from "@/pages";
 import { UsersIcon } from "@heroicons/react/24/outline";
 import {
   ArrowRightOnRectangleIcon,
-  HomeIcon,
-  UserGroupIcon
+  HomeIcon
 } from "@heroicons/react/24/solid";
 
 export const routes = [
@@ -19,12 +18,12 @@ export const routes = [
     path: "/about-us",
     element: <Home />,
   },
-  {
-    icon: UserGroupIcon,
-    name: "Our Team",
-    path: "/teamPage",
-    element: <Home/>,
-  },
+  // {
+  //   icon: UserGroupIcon,
+  //   name: "Our Team",
+  //   path: "/teamPage",
+  //   element: <Home/>,
+  // },
   {
     icon: ArrowRightOnRectangleIcon,
     name: "Programs",
