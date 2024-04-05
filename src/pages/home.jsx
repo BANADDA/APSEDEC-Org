@@ -1,5 +1,5 @@
-import { contactData, featuresData, teamData } from "@/data";
-import { FeatureCard, TeamCard } from "@/widgets/cards";
+import { contactData, featuresData } from "@/data";
+import { FeatureCard } from "@/widgets/cards";
 import { Footer, PageTitle } from "@/widgets/layout";
 import {
   Button,
@@ -85,7 +85,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <section className="-mt-32 bg-gray-200 px-4 pb-20 pt-4">
+      <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map(({ color, title, icon, description }) => (
@@ -165,27 +165,52 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section className="px-1 pt-1 pb-20">
+      <section className="bg-green-50 px-1 pt-20 pb-20">
         <div className="container mx-auto">
           <PageTitle section="Our Management" heading="Ownership and Governance">
-            The organization comprises 26 member entities from the private, public, and civil sectors,
-            governed by a Board of Directors elected from these members. This Board ensures the company
-            adheres to its vision, mission, and objectives.
+            <div className="text-center">
+              <p className="text-lg text-gray-700">
+                The organization comprises 26 member entities from the private,
+                public, and civil sectors, governed by a Board of Directors elected
+                from these members. This Board ensures the company adheres to its vision,
+                mission, and objectives.</p>
+            </div>
           </PageTitle>
-          <div className="mt-10 mx-auto grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-3">
-            {teamData.map(({ img, name, position, contact }) => (
-              <TeamCard
-                key={name}
-                img={img}
-                name={name}
-                position={position}
-                contact={contact}
-              />
-            ))}
+          {/* CEO Message */}
+          <div className="flex flex-col md:flex-row items-center justify-between my-10">
+            {/* CEO Image */}
+            <div className="bg-white md:w-1/3 mx-auto mb-6 md:mb-0">
+              {/* Placeholder for CEO Image */}
+              <img src="/img/ceo.png" alt="CEO" className="w-full rounded-lg shadow-lg" />
+            </div>
+
+            {/* CEO Message Text */}
+            <div className="md:w-2/3 md:ml-10">
+              <div className="bg-gradient-to-br from-blue-200 to-blue-500 rounded-lg shadow-lg p-6">
+                <p className="text-lg font-semibold mb-4 text-white">CEO Message:</p>
+                <p className="text-gray-100 leading-relaxed">
+                  As the Chief Executive Officer of APSEDEC, I am pleased to share our ongoing commitment to poverty reduction and sustainable development. Over the years, APSEDEC has been dedicated to implementing various interventions aimed at improving livelihoods and fostering inclusive growth in communities across Uganda.
+                </p>
+                <p className="text-gray-100 leading-relaxed mt-4">
+                  Our efforts have focused on initiatives such as financial inclusion in rural areas, youth empowerment programs, agricultural development projects, and strengthening local governance. These endeavors have not only contributed to economic empowerment but have also fostered resilience and community cohesion.
+                </p>
+                <p className="text-gray-100 leading-relaxed mt-4">
+                  I extend my sincere gratitude to our partners, donors, board members, and dedicated staff for their unwavering support and commitment. Together, we have achieved significant milestones, and I am confident that with continued collaboration, we will further our impact and reach even greater heights.
+                </p>
+                <p className="text-gray-100 mt-4">
+                  Thank you for your trust and partnership.
+                </p>
+                <p className="text-gray-100 mt-4">
+                  Nelson Tasenga <br />
+                  Chief Executive Officer
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section className="relative bg-gray-300 py-3 px-4">
+
+      <section className="relative bg-gray-100 pt-20 py-3 px-4">
         <div className="container mx-auto">
           <PageTitle section="Our Services" heading="Fostering Growth">
             At APSEDEC, we are committed to fostering economic growth and development
@@ -214,61 +239,9 @@ export function Home() {
                     {description}
                   </Typography>
                 </CardBody>
-                {/* <CardFooter className="pt-0">
-                  <a href="#" className="inline-block">
-                    <Button size="sm" variant="text" className="flex items-center gap-2">
-                      Learn More
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={2}
-                        stroke="currentColor"
-                        className="h-4 w-4"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                        />
-                      </svg>
-                    </Button>
-                  </a>
-                </CardFooter> */}
               </Card>
             ))}
           </div>
-          {/* <PageTitle section="Contact Us" heading="Want to work with us?">
-            Complete this form and we will get back to you in 24 hours.
-          </PageTitle>
-          <form className="mx-auto w-full mt-12 lg:w-5/12">
-            <div className="mb-8 flex gap-8">
-              <Input variant="outlined" size="lg" label="Full Name" />
-              <Input variant="outlined" size="lg" label="Email Address" />
-            </div>
-            <Textarea variant="outlined" size="lg" label="Message" rows={8} />
-            <Checkbox
-              label={
-                <Typography
-                  variant="small"
-                  color="gray"
-                  className="flex items-center font-normal"
-                >
-                  I agree the
-                  <a
-                    href="#"
-                    className="font-medium transition-colors hover:text-green-900"
-                  >
-                    &nbsp;Terms and Conditions
-                  </a>
-                </Typography>
-              }
-              containerProps={{ className: "-ml-2.5" }}
-            />
-            <Button variant="filled" size="lg" className="mt-8 bg-green-800" fullWidth>
-              Send Message
-            </Button>
-          </form> */}
         </div>
       </section>
       <div className="bg-black">

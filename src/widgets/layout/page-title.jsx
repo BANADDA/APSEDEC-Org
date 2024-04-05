@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export function PageTitle({ section, heading, children }) {
   return (
-    <div className="mx-auto w-full px-4 text-center lg:w-6/12">
+    <div className="pb-10 mx-auto w-full px-4 text-center lg:w-6/12">
       <Typography variant="h4" className="font-bold text-green-500 underline">
         {section}
       </Typography>

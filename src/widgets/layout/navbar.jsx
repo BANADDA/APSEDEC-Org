@@ -63,7 +63,7 @@ export function Navbar({ logo, brandName1, brandName2, brandName3, brandName4, b
   );
 
   return (
-    <MTNavbar className="p-3 pb-0.5 bg-gray-850 border-0 h-16">
+    <MTNavbar className="p-3 pb-0.5 bg-white border-0 h-16">
       <div className="container mx-auto flex items-center justify-between text-black text-6xl font-bold">
         <Link to="/">
           <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-extrabold flex align-middle gap-2 text-xl ">
