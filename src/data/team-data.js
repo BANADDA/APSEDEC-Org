@@ -21,7 +21,7 @@ export const teamData = [
   // Aish
   {
     img: "/img/ceo.png",
-    name: "Alexa Smith",
+    name: "Patrick Opobo Opiyo",
     position: "Finance and Administration Manager",
     contact: {
       phone: "+256782525228",
