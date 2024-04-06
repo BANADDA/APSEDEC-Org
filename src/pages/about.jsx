@@ -19,13 +19,13 @@ export function About() {
     return (
         <>
             <div className="relative flex h-fit content-center items-center justify-center bg-[url('/img/about.png')] bg-cover pt-16 pb-32 ">
+            <div className="absolute top-0 h-full w-full bg-black/25" />
                 <div className="max-w-8xl container relative mx-auto">
                     <div className="flex flex-wrap items-center pt-10">
                         <div className="opacity-300 ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
                             <Typography
                                 variant="h1"
-                                color="white"
-                                className="mb-6 mt-20 text-6xl font-black"
+                                className="text-gray-100 mb-6 mt-20 text-6xl font-bold"
                             >
                                 ABOUT <span className={styled["home-span"]}>US.</span>
                             </Typography>
