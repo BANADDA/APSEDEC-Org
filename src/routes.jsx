@@ -2,9 +2,12 @@ import { Home } from "@/pages";
 import { UsersIcon } from "@heroicons/react/24/outline";
 import {
   ArrowRightOnRectangleIcon,
-  HomeIcon
+  HomeIcon,
+  PhoneIcon
 } from "@heroicons/react/24/solid";
 import About from "./pages/about";
+import Contact from "./pages/contact";
+import Programs from "./pages/programs";
 
 export const routes = [
   {
@@ -29,14 +32,14 @@ export const routes = [
     icon: ArrowRightOnRectangleIcon,
     name: "Programs",
     path: "/programs",
-    element: <Home/>,
+    element: <Programs/>,
   },
-  // {
-  //   icon: PhoneIcon,
-  //   name: "Contact Us",
-  //   path: "/contact",
-  //   element: <Home />,
-  // },
+  {
+    icon: PhoneIcon,
+    name: "Contact Us",
+    path: "/contact",
+    element: <Contact />,
+  },
 ];
 
 

@@ -81,7 +81,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
 Footer.defaultProps = {
   title: "ACHOLI PRIVATE SECTOR DEVELOPMENT COMPANY LIMITED",
   description:
-    "Fostering Growth for local communities.",
+    "Fostering Growth for local communities since 1999.",
   socials: [
     {
       color: "blue",

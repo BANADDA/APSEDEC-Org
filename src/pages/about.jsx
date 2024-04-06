@@ -304,7 +304,12 @@ export function About() {
                                 </div>
                             </div>
                         </div>
-                        <Button className="mt-6 mx-auto flex" variant="outlined">see all projects</Button>
+                        <Link
+                            to="/programs"
+                            target=""
+                        >
+                            <Button className="mt-6 mx-auto flex" variant="outlined">see all projects</Button>
+                        </Link>
                     </section>
                 </div>
             </section>

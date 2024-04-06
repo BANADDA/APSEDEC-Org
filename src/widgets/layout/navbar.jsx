@@ -142,11 +142,11 @@ Navbar.defaultProps = {
   brandName7: "C",
   action: (
     <Link
-      to="/"
+      to="/contact"
       target=""
     >
       <Button className=" from-green-800 to-green-800 shadow-md shadow-green-800/20 hover:shadow-lg hover:shadow-green-700/40 active:opacity-[0.85] block w-full" variant="gradient" size="sm" fullWidth>
-        Contact Us
+        Sponsor Us
       </Button>
     </Link>
   ),
