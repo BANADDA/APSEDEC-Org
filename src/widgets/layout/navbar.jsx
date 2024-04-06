@@ -66,9 +66,12 @@ export function Navbar({ logo, brandName1, brandName2, brandName3, brandName4, b
     <MTNavbar className="p-3 pb-0.5 bg-white border-0 h-16">
       <div className="container mx-auto flex items-center justify-between text-black text-6xl font-bold">
         <Link to="/">
-          <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-extrabold flex align-middle gap-2 text-xl ">
-           {brandName1}{brandName2}S{brandName4}{brandName5}{brandName6}{brandName7}
-          </Typography>
+          <div className="flex items-center">
+            {logo}
+            <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-extrabold flex align-middle gap-2 text-xl">
+              {brandName1}{brandName2}S{brandName4}{brandName5}{brandName6}{brandName7}
+            </Typography>
+          </div>
         </Link>
         <div className="hidden lg:block">{navList}</div>
         <div className="hidden gap-2 lg:flex text-6xl">
@@ -125,9 +128,10 @@ export function Navbar({ logo, brandName1, brandName2, brandName3, brandName4, b
 Navbar.defaultProps = {
   logo: (
     <img
-        className="w-[33px] h-[35px] p-0"
-        src='/img/favicon.png'>
-    </img> 
+      className="w-[33px] h-[35px] p-0"
+      src='/img/badge.png'
+      alt="Logo"
+    />
   ),
   brandName1: "A",
   brandName2: "P",
@@ -142,15 +146,15 @@ Navbar.defaultProps = {
       target=""
     >
       <Button className=" from-green-800 to-green-800 shadow-md shadow-green-800/20 hover:shadow-lg hover:shadow-green-700/40 active:opacity-[0.85] block w-full" variant="gradient" size="sm" fullWidth>
-      Contact Us
-    </Button>
+        Contact Us
+      </Button>
     </Link>
   ),
 };
 
 Navbar.propTypes = {
   brandName: PropTypes.string,
-  routes: PropTypes.arrayOf(PropTypes.object).isRequigreen,
+  routes: PropTypes.arrayOf(PropTypes.object).isRequired,
   action: PropTypes.node,
 };
 

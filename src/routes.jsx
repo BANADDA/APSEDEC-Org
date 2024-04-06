@@ -4,6 +4,7 @@ import {
   ArrowRightOnRectangleIcon,
   HomeIcon
 } from "@heroicons/react/24/solid";
+import About from "./pages/about";
 
 export const routes = [
   {
@@ -16,7 +17,7 @@ export const routes = [
     icon: UsersIcon,
     name: "About Us",
     path: "/about-us",
-    element: <Home />,
+    element: <About />,
   },
   // {
   //   icon: UserGroupIcon,

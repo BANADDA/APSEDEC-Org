@@ -66,21 +66,6 @@ export function Home() {
                 tirelessly to uplift and empower communities across Uganda. Join
                 us in building a brighter future for all
               </Typography>
-
-              {/* <div className=" flex items-center justify-center gap-5 pt-20">
-                <IconButton color="blue" variant="text">
-                  <i className={`fa-brands fa-facebook text-4xl`} />
-                </IconButton>
-                <IconButton color="blue" variant="text">
-                  <i className={`fa-brands fa-twitter text-4xl`} />
-                </IconButton>
-                <IconButton color="pink" variant="text">
-                  <i className={`fa-brands fa-instagram text-4xl`} />
-                </IconButton>
-                <IconButton color="green" variant="text">
-                  <i className={`fa-brands fa-youtube text-4xl`} />
-                </IconButton>
-              </div> */}
             </div>
           </div>
         </div>
@@ -126,7 +111,7 @@ export function Home() {
                 Collaborating with government bodies, international donors, and communities, we aim
                 to strengthen the economic fabric of the Acholi Sub-region and beyond.
               </Typography>
-              <Link to="/">
+              <Link to="/about-us">
                 <Button
                   variant="outlined"
                   className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white focus:ring-gray-200"
