@@ -19,7 +19,7 @@ export function About() {
     return (
         <>
             <div className="relative flex h-fit content-center items-center justify-center bg-[url('/img/about.png')] bg-cover pt-16 pb-32 ">
-            <div className="absolute top-0 h-full w-full bg-black/25" />
+                <div className="absolute top-0 h-full w-full bg-black/25" />
                 <div className="max-w-8xl container relative mx-auto">
                     <div className="flex flex-wrap items-center pt-10">
                         <div className="opacity-300 ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
@@ -264,6 +264,82 @@ export function About() {
                                 <div className="flex flex-col items-center justify-center gap-6">
                                     <Card shadow={false} className="bg-[#FAFAFA] px-10">
                                         <CardBody>
+                                            <Image
+                                                src="/img/maaif.png"
+                                                alt="Makerere AI Research Lab logo"
+                                                width={160}
+                                                height={160}
+                                                className="w-40"
+                                            />
+                                            <Typography variant="small" className="p-2 font-normal text-gray-500">
+                                                Ministry of Agriculture
+                                            </Typography>
+                                        </CardBody>
+                                    </Card>
+                                    <Card shadow={false} className="bg-[#FAFAFA] px-10">
+                                        <CardBody>
+                                            <Image
+                                                src="/img/maaif.png"
+                                                alt="Veterinarians logo"
+                                                width={160}
+                                                height={160}
+                                                className=" w-40 "
+                                            />
+                                            <Typography variant="small" className="p-2 font-normal text-gray-500">
+                                                AFDB
+                                            </Typography>
+                                        </CardBody>
+                                    </Card>
+                                </div>
+                                <Card shadow={false} className="bg-[#FAFAFA] lg:px-10 justify-center max-w-[18rem] lg:max-w-lg">
+                                    <CardBody className="text-center">
+                                        <Image
+                                            src="/img/gov.png"
+                                            alt="Ministry of Agriculture logo"
+                                            width={176}
+                                            height={176}
+                                            className="w-44 mx-auto"
+                                        />
+                                        <Typography variant="small" className="p-2 font-normal text-gray-500 mb-4">
+                                            Government of Uganda
+                                        </Typography>
+                                    </CardBody>
+                                </Card>
+                                <div className="flex flex-col items-center justify-center gap-6">
+                                    <Card shadow={false} className="bg-[#FAFAFA] px-10">
+                                        <CardBody>
+                                            <Image
+                                                src="/img/iirr.png"
+                                                alt="UVAs logo"
+                                                width={160}
+                                                height={160}
+                                                className="w-40"
+                                            />
+                                            <Typography variant="small" className="p-2 font-normal text-gray-500">
+                                                IIRR
+                                            </Typography>
+                                        </CardBody>
+                                    </Card>
+                                    <Card shadow={false} className="bg-[#FAFAFA] px-10">
+                                        <CardBody>
+                                            <Image
+                                                src="/img/ifad.png"
+                                                alt="NARRO logo"
+                                                width={160}
+                                                height={160}
+                                                className=" w-40 "
+                                            />
+                                            <Typography variant="small" className="p-2 font-normal text-gray-500">
+                                                IFAD
+                                            </Typography>
+                                        </CardBody>
+                                    </Card>
+                                </div>
+                            </div>
+                            {/* <div className="flex flex-col md:flex-row gap-6 max-w-6xl mx-auto">
+                                <div className="flex flex-col items-center justify-center gap-6">
+                                    <Card shadow={false} className="bg-[#FAFAFA] px-10">
+                                        <CardBody>
                                             <img
                                                 src="/img/maaif.png"
                                                 alt="logo"
@@ -302,7 +378,7 @@ export function About() {
                                         </CardBody>
                                     </Card>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <Link
                             to="/programs"
