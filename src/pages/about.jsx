@@ -17,6 +17,7 @@ export function About() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
     return (
         <>
             <div className="relative flex h-fit content-center items-center justify-center bg-[url('/img/about.png')] bg-cover pt-16 pb-32 ">
@@ -43,7 +44,7 @@ export function About() {
                                 color={color}
                                 title={title}
                                 icon={React.createElement(icon, {
-                                    className: "w-5 h-5 text-white,",
+                                    className: "w-5 h-5 text-white",
                                 })}
                                 description={description}
                             />
@@ -53,20 +54,20 @@ export function About() {
                         <div className="flex">
                             <div className="w-1/3 px-5 bg-green-50">
                                 <img
-                                    class=" h-full rounded-l-lg object-contain"
+                                    className="h-full rounded-l-lg object-contain"
                                     src="/img/badge.png"
                                     alt="card image"
                                 />
                             </div>
-                            <div class="text-secondary w-2/3 p-6 pr-0 pl-10">
+                            <div className="text-secondary w-2/3 p-6 pr-0 pl-10">
                                 <Typography
                                     variant="h2"
                                     className="font-sans text-3xl font-semibold text-blue-gray-900 mb-4"
                                 >
                                     Our <span className="text-green-500">Objectives</span>
                                 </Typography>
-                                <ul className="my-10 mt-0 w-full  space-y-1 text-blue-gray-600 dark:text-blue-gray-600">
-                                    <li className="mr-0 flex ">
+                                <ul className="my-10 mt-0 w-full space-y-1 text-blue-gray-600 dark:text-blue-gray-600">
+                                    <li className="mr-0 flex">
                                         <svg
                                             className="mr-1.5 h-4 w-4 flex-shrink-0 text-green-500 dark:text-green-400"
                                             fill="currentColor"
@@ -74,9 +75,9 @@ export function About() {
                                             xmlns="http://www.w3.org/2000/svg"
                                         >
                                             <path
-                                                fill-rule="evenodd"
+                                                fillRule="evenodd"
                                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd"
+                                                clipRule="evenodd"
                                             ></path>
                                         </svg>
                                         Offer Business Development Services to various enterprises and organizations across the public and private sectors, aimed at enhancing income, livelihoods, and competitiveness.
@@ -89,9 +90,9 @@ export function About() {
                                             xmlns="http://www.w3.org/2000/svg"
                                         >
                                             <path
-                                                fill-rule="evenodd"
+                                                fillRule="evenodd"
                                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd"
+                                                clipRule="evenodd"
                                             ></path>
                                         </svg>
                                         Support and promote entrepreneurship among informal, micro, small, and medium enterprises through specialized services.
@@ -104,9 +105,9 @@ export function About() {
                                             xmlns="http://www.w3.org/2000/svg"
                                         >
                                             <path
-                                                fill-rule="evenodd"
+                                                fillRule="evenodd"
                                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd"
+                                                clipRule="evenodd"
                                             ></path>
                                         </svg>
                                         Provide microfinance support, including training, technical guidance, and advocacy for institutions like Village Savings and Loan Associations (VSLA), Savings and Credit Cooperatives (SACCOs), and microfinance institutions (MFIs), focusing on governance, operations, and system development.
@@ -119,9 +120,9 @@ export function About() {
                                             xmlns="http://www.w3.org/2000/svg"
                                         >
                                             <path
-                                                fill-rule="evenodd"
+                                                fillRule="evenodd"
                                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd"
+                                                clipRule="evenodd"
                                             ></path>
                                         </svg>
                                         Conduct research and development to bolster our business objectives.
@@ -134,9 +135,9 @@ export function About() {
                                             xmlns="http://www.w3.org/2000/svg"
                                         >
                                             <path
-                                                fill-rule="evenodd"
+                                                fillRule="evenodd"
                                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd"
+                                                clipRule="evenodd"
                                             ></path>
                                         </svg>
                                         Develop strategic linkages, partnerships, and institutional development with various entities to foster income generation and sustainable livelihoods.
@@ -149,9 +150,9 @@ export function About() {
                                             xmlns="http://www.w3.org/2000/svg"
                                         >
                                             <path
-                                                fill-rule="evenodd"
+                                                fillRule="evenodd"
                                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd"
+                                                clipRule="evenodd"
                                             ></path>
                                         </svg>
                                         Promote advanced agricultural post-harvest techniques, improved methods, and value addition technologies.
@@ -172,7 +173,7 @@ export function About() {
                                 </div>
                                 <Typography
                                     variant="h2"
-                                    className=" mb-3 text-4xl font-bold"
+                                    className="mb-3 text-4xl font-bold"
                                     color="blue-gray"
                                 >
                                     Our <span className={styled["home-span"]}>Team</span>
@@ -204,20 +205,24 @@ export function About() {
                             </div>
                             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-5/12 lg:mt-0">
                                 <div className="grid grid-cols-1 gap-8">
-                                    <img
+                                    <Image
                                         alt="Image 1"
                                         src="/img/5.png"
+                                        width={500}
+                                        height={500}
                                         className="h-auto w-full"
                                     />
-                                    <img
+                                    <Image
                                         alt="Image 2"
                                         src="/img/6.png"
+                                        width={500}
+                                        height={500}
                                         className="h-auto w-full"
                                     />
                                 </div>
                             </div>
                         </div>
-                        {/* START Add title and centered organization structure image here*/}
+                        {/* START Add title and centered organization structure image here */}
                         <div className="mx-auto mt-5 mb-14 flex flex-col items-center w-full justify-center">
                             <Typography
                                 variant="h2"
@@ -225,21 +230,16 @@ export function About() {
                             >
                                 Organization <span className="text-green-500">Structure</span>
                             </Typography>
-                            <img
+                            <Image
                                 alt="Organization Structure"
                                 src="/img/structure.png"
+                                width={800}
+                                height={600}
                                 className="h-auto w-full max-w-4xl"
                             />
                         </div>
                         {/* END */}
                         <div className="container !mx-auto text-center place-content-center grid">
-                            {/* <Typography
-                                color="blue-gray"
-                                variant="lead"
-                                className="!font-semibold lg:!text-lg !text-base"
-                            >
-                                More than 50+ brands trust us
-                            </Typography> */}
                             <Typography
                                 variant="h1"
                                 color="blue-gray"
@@ -284,7 +284,7 @@ export function About() {
                                                 alt="Veterinarians logo"
                                                 width={160}
                                                 height={160}
-                                                className=" w-40 "
+                                                className="w-40"
                                             />
                                             <Typography variant="small" className="p-2 font-normal text-gray-500">
                                                 AFDB
@@ -328,7 +328,7 @@ export function About() {
                                                 alt="NARRO logo"
                                                 width={160}
                                                 height={160}
-                                                className=" w-40 "
+                                                className="w-40"
                                             />
                                             <Typography variant="small" className="p-2 font-normal text-gray-500">
                                                 IFAD
@@ -337,54 +337,8 @@ export function About() {
                                     </Card>
                                 </div>
                             </div>
-                            {/* <div className="flex flex-col md:flex-row gap-6 max-w-6xl mx-auto">
-                                <div className="flex flex-col items-center justify-center gap-6">
-                                    <Card shadow={false} className="bg-[#FAFAFA] px-10">
-                                        <CardBody>
-                                            <img
-                                                src="/img/maaif.png"
-                                                alt="logo"
-                                                className="w-80"
-                                            />
-                                            <Typography variant="small" className="font-normal text-gray-500">
-                                                Ministry of Agriculture
-                                            </Typography>
-                                        </CardBody>
-                                    </Card>
-                                </div>
-                                <Card shadow={false} className="bg-[#FAFAFA] lg:px-10 justify-center max-w-[18rem] lg:max-w-lg">
-                                    <CardBody className="text-center">
-                                        <img
-                                            src="/img/gov.png"
-                                            alt="logo"
-                                            className="w-78 mx-auto"
-                                        />
-                                        <Typography variant="small" className="font-normal text-gray-500 mb-4">
-                                            Government of Uganda
-                                        </Typography>
-                                    </CardBody>
-                                </Card>
-                                <div className="flex flex-col items-center justify-center gap-6">
-
-                                    <Card shadow={false} className="bg-[#FAFAFA] px-10">
-                                        <CardBody>
-                                            <img
-                                                src="/img/iirr.png"
-                                                alt="logo"
-                                                className="w-80"
-                                            />
-                                            <Typography variant="small" className="font-normal text-gray-500">
-                                                IIRR
-                                            </Typography>
-                                        </CardBody>
-                                    </Card>
-                                </div>
-                            </div> */}
                         </div>
-                        <Link
-                            to="/programs"
-                            target=""
-                        >
+                        <Link to="/programs">
                             <Button className="mt-6 mx-auto flex" variant="outlined">see all projects</Button>
                         </Link>
                     </section>
