@@ -8,7 +8,6 @@ import {
     CardBody,
     Typography
 } from "@material-tailwind/react";
-import Image from 'next/image';
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "./home.module.css";
@@ -205,18 +204,14 @@ export function About() {
                             </div>
                             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-5/12 lg:mt-0">
                                 <div className="grid grid-cols-1 gap-8">
-                                    <Image
+                                    <img
                                         alt="Image 1"
                                         src="/img/5.png"
-                                        width={500}
-                                        height={500}
                                         className="h-auto w-full"
                                     />
-                                    <Image
+                                    <img
                                         alt="Image 2"
                                         src="/img/6.png"
-                                        width={500}
-                                        height={500}
                                         className="h-auto w-full"
                                     />
                                 </div>
@@ -230,11 +225,9 @@ export function About() {
                             >
                                 Organization <span className="text-green-500">Structure</span>
                             </Typography>
-                            <Image
+                            <img
                                 alt="Organization Structure"
                                 src="/img/structure.png"
-                                width={800}
-                                height={600}
                                 className="h-auto w-full max-w-4xl"
                             />
                         </div>
@@ -265,28 +258,24 @@ export function About() {
                                 <div className="flex flex-col items-center justify-center gap-6">
                                     <Card shadow={false} className="bg-[#FAFAFA] px-10">
                                         <CardBody>
-                                            <Image
+                                            <img
                                                 src="/img/maaif.png"
-                                                alt="Makerere AI Research Lab logo"
-                                                width={160}
-                                                height={160}
-                                                className="w-40"
+                                                alt="logo"
+                                                className="w-80"
                                             />
-                                            <Typography variant="small" className="p-2 font-normal text-gray-500">
+                                            <Typography variant="small" className="font-normal text-gray-500">
                                                 Ministry of Agriculture
                                             </Typography>
                                         </CardBody>
                                     </Card>
                                     <Card shadow={false} className="bg-[#FAFAFA] px-10">
                                         <CardBody>
-                                            <Image
-                                                src="/img/maaif.png"
-                                                alt="Veterinarians logo"
-                                                width={160}
-                                                height={160}
-                                                className="w-40"
+                                            <img
+                                                src="/img/afdb.png"
+                                                alt="logo"
+                                                className="w-80"
                                             />
-                                            <Typography variant="small" className="p-2 font-normal text-gray-500">
+                                            <Typography variant="small" className="font-normal text-gray-500">
                                                 AFDB
                                             </Typography>
                                         </CardBody>
@@ -294,14 +283,12 @@ export function About() {
                                 </div>
                                 <Card shadow={false} className="bg-[#FAFAFA] lg:px-10 justify-center max-w-[18rem] lg:max-w-lg">
                                     <CardBody className="text-center">
-                                        <Image
+                                        <img
                                             src="/img/gov.png"
-                                            alt="Ministry of Agriculture logo"
-                                            width={176}
-                                            height={176}
-                                            className="w-44 mx-auto"
+                                            alt="logo"
+                                            className="w-78 mx-auto"
                                         />
-                                        <Typography variant="small" className="p-2 font-normal text-gray-500 mb-4">
+                                        <Typography variant="small" className="font-normal text-gray-500 mb-4">
                                             Government of Uganda
                                         </Typography>
                                     </CardBody>
@@ -309,28 +296,24 @@ export function About() {
                                 <div className="flex flex-col items-center justify-center gap-6">
                                     <Card shadow={false} className="bg-[#FAFAFA] px-10">
                                         <CardBody>
-                                            <Image
+                                            <img
                                                 src="/img/iirr.png"
-                                                alt="UVAs logo"
-                                                width={160}
-                                                height={160}
-                                                className="w-40"
+                                                alt="logo"
+                                                className="w-80"
                                             />
-                                            <Typography variant="small" className="p-2 font-normal text-gray-500">
+                                            <Typography variant="small" className="font-normal text-gray-500">
                                                 IIRR
                                             </Typography>
                                         </CardBody>
                                     </Card>
                                     <Card shadow={false} className="bg-[#FAFAFA] px-10">
                                         <CardBody>
-                                            <Image
+                                            <img
                                                 src="/img/ifad.png"
-                                                alt="NARRO logo"
-                                                width={160}
-                                                height={160}
-                                                className="w-40"
+                                                alt="logo"
+                                                className="w-80"
                                             />
-                                            <Typography variant="small" className="p-2 font-normal text-gray-500">
+                                            <Typography variant="small" className="font-normal text-gray-500">
                                                 IFAD
                                             </Typography>
                                         </CardBody>
