@@ -36,7 +36,7 @@ export function Contact() {
       reply_to: form.current.from_email.value,
     };
 
-    emailjs.send('service_8v6syun', 'template_ou88xf5', templateParams, '8XQcAphyr4W8Y4DCs')
+    emailjs.send('service_7ws7y7w', 'template_ngqw9z8', templateParams, 'xB7sD8gidHosWTIRO')
       .then((result) => {
           console.log(result.text);
           setLoading(false);
