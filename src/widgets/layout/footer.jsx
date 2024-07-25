@@ -143,7 +143,7 @@ Footer.defaultProps = {
           // path: "https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk",
         },
         {
-          name: "EMAIL :  apsedec2006@yahoo.co.uk",
+          name: "EMAIL : apsedec2006@gmail.com",
           path: "apsedec2006@yahoo.co.uk",
         },
         // {
