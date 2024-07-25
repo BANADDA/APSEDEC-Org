@@ -151,7 +151,7 @@ Footer.defaultProps = {
         //   path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CHANGELOG.md?ref=mtk",
         // },
         {
-          name: "CALL: +256 777 4505904",
+          name: "CALL: +256 774 505904",
           // path: "/",
         },
       ],
