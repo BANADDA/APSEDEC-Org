@@ -4,6 +4,8 @@ import emailjs from 'emailjs-com';
 import 'leaflet/dist/leaflet.css';
 import { useRef, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const center = {
   lat: 3.2783, // Approximate latitude for Kitgum
@@ -13,7 +15,6 @@ const center = {
 export function Contact() {
   const form = useRef();
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -23,11 +24,12 @@ export function Contact() {
       .then((result) => {
           console.log(result.text);
           setLoading(false);
-          setSuccess(true);
+          toast.success("Your message has been sent successfully!");
+          form.current.reset(); // Clear the form
       }, (error) => {
           console.log(error.text);
           setLoading(false);
-          setSuccess(false);
+          toast.error("An error occurred, please try again.");
       });
   };
 
@@ -114,11 +116,11 @@ export function Contact() {
               <Button type="submit" className="w-full" color="green" disabled={loading}>
                 {loading ? 'Sending...' : 'Send message'}
               </Button>
-              {success && <Typography className="text-green-600 mt-4">Your message has been sent successfully!</Typography>}
             </form>
           </div>
         </div>
       </section>
+      <ToastContainer />
       <div id="contact-us" className=" bg-black">
         <Footer />
       </div>
