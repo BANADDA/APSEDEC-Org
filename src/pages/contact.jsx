@@ -20,11 +20,27 @@ export function Contact() {
     e.preventDefault();
     setLoading(true);
 
-    emailjs.sendForm('service_8v6syun', 'template_ou88xf5', form.current, '8XQcAphyr4W8Y4DCs')
+    // emailjs.send("service_8v6syun","template_ou88xf5",{
+    //     first_name: "Banadda",
+    //     last_name: "Mubaraka",
+    //     message: "Hello",
+    //     from_email: "mubaraka.banadda@students.mak.ac.ug",
+    //     reply_to: "mubaraka.banadda@students.mak.ac.ug",
+    //     });
+
+    const templateParams = {
+      first_name: form.current.first_name.value,
+      last_name: form.current.last_name.value,
+      from_email: form.current.from_email.value,
+      message: form.current.message.value,
+      reply_to: form.current.from_email.value,
+    };
+
+    emailjs.send('service_8v6syun', 'template_ou88xf5', templateParams, '8XQcAphyr4W8Y4DCs')
       .then((result) => {
           console.log(result.text);
           setLoading(false);
-          toast.success("Your message has been sent successfully!");
+          toast.success("Your email has been sent successfully!");
           form.current.reset(); // Clear the form
       }, (error) => {
           console.log(error.text);
