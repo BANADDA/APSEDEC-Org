@@ -2,7 +2,7 @@ import { Footer } from "@/widgets/layout";
 import { Button, Input, Textarea, Typography } from "@material-tailwind/react";
 import emailjs from 'emailjs-com';
 import 'leaflet/dist/leaflet.css';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
 const center = {
@@ -12,15 +12,22 @@ const center = {
 
 export function Contact() {
   const form = useRef();
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs.sendForm('service_8v6syun', 'template_ou88xf5', form.current, '8XQcAphyr4W8Y4DCs')
       .then((result) => {
           console.log(result.text);
+          setLoading(false);
+          setSuccess(true);
       }, (error) => {
           console.log(error.text);
+          setLoading(false);
+          setSuccess(false);
       });
   };
 
@@ -104,9 +111,10 @@ export function Contact() {
                   containerProps={{ className: "!min-w-full" }}
                   labelProps={{ className: "hidden" }} />
               </div>
-              <Button type="submit" className="w-full" color="green">
-                Send message
+              <Button type="submit" className="w-full" color="green" disabled={loading}>
+                {loading ? 'Sending...' : 'Send message'}
               </Button>
+              {success && <Typography className="text-green-600 mt-4">Your message has been sent successfully!</Typography>}
             </form>
           </div>
         </div>
