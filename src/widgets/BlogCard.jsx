@@ -37,7 +37,7 @@ const BlogCard = ({ imageUrl, title, createdAt, caption, onView, onEdit, onDelet
             <CardActions>
                 <Button size="small" onClick={onView}>View</Button>
                 {/* <Button size="small" onClick={onEdit}>Edit</Button> */}
-                <Button size="small" onClick={onDelete}>Delete</Button>
+                {/* <Button size="small" onClick={onDelete}>Delete</Button> */}
             </CardActions>
         </Card>
     );
