@@ -3,11 +3,14 @@ import { UsersIcon } from "@heroicons/react/24/outline";
 import {
   ArrowRightOnRectangleIcon,
   HomeIcon,
-  PhoneIcon
+  PhoneIcon,
+  PhotoIcon
 } from "@heroicons/react/24/solid";
 import About from "./pages/about";
 import Contact from "./pages/contact";
+import Gallery from "./pages/Gallery";
 import Programs from "./pages/programs";
+
 
 export const routes = [
   {
@@ -22,17 +25,17 @@ export const routes = [
     path: "/about-us",
     element: <About />,
   },
-  // {
-  //   icon: UserGroupIcon,
-  //   name: "Our Team",
-  //   path: "/teamPage",
-  //   element: <Home/>,
-  // },
   {
     icon: ArrowRightOnRectangleIcon,
-    name: "Programs",
+    name: "Projects",
     path: "/programs",
     element: <Programs/>,
+  },
+  {
+    icon: PhotoIcon,
+    name: "Gallery",
+    path: "/gallery",
+    element: <Gallery/>,
   },
   {
     icon: PhoneIcon,
