@@ -20,14 +20,6 @@ export function Contact() {
     e.preventDefault();
     setLoading(true);
 
-    // emailjs.send("service_8v6syun","template_ou88xf5",{
-    //     first_name: "Banadda",
-    //     last_name: "Mubaraka",
-    //     message: "Hello",
-    //     from_email: "mubaraka.banadda@students.mak.ac.ug",
-    //     reply_to: "mubaraka.banadda@students.mak.ac.ug",
-    //     });
-
     const templateParams = {
       first_name: form.current.first_name.value,
       last_name: form.current.last_name.value,
