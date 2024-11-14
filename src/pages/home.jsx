@@ -2,16 +2,41 @@ import { backgrounds, contactData, featuresData, headerData, managementData, ser
 import { FeatureCard } from "@/widgets/cards";
 import { Footer, PageTitle } from "@/widgets/layout";
 import { Button, Card, CardBody, CardHeader, Typography } from "@material-tailwind/react";
+import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { db } from "./firebase-config";
 
 export function Home() {
+  const [textData, setTextData] = useState({});
   const [currentBackground, setCurrentBackground] = useState(0);
+
+  // Fetch content from Firestore
+  useEffect(() => {
+    const fetchData = async () => {
+      console.log("Starting data fetch for the entire collection...");
+      try {
+        const querySnapshot = await getDocs(collection(db, "apsedecContent"));
+        const collectionData = {};
+
+        querySnapshot.forEach((doc) => {
+          collectionData[doc.id] = doc.data();
+        });
+
+        setTextData(collectionData);
+        console.log("Entire collection data fetched and set in state successfully.");
+      } catch (error) {
+        console.error("Error fetching entire collection:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBackground((current) => (current + 1) % backgrounds.length);
-    }, 3000); // Change image every 3 seconds
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -32,10 +57,13 @@ export function Home() {
           <div className="flex flex-wrap items-center">
             <div className="opacity-300 ml-auto mr-auto w-full px-1 text-center lg:w-8/12">
               <Typography variant="h1" className="mb-6 font-black text-gray-300">
-                {headerData.title} <span className={headerData.highlight}>{headerData.acronym}</span>
+                {textData.hero?.title || headerData.title}{" "}
+                <span className={textData.hero ? textData.hero.subtitle : headerData.subtitle}>
+                  {textData.hero?.acronym || headerData.acronym}
+                </span>
               </Typography>
               <Typography variant="lead" color="white" className="opacity-400 inline-block text-center pt-5 text-2xl font-bold text-gray-300">
-                {headerData.description}
+                {textData.hero?.content || headerData.content}
               </Typography>
             </div>
           </div>
@@ -49,7 +77,7 @@ export function Home() {
             {featuresData.map(({ color, icon, title, description }) => (
               <FeatureCard
                 key={title}
-                icon={React.createElement(icon, { className: "w-5 h-5 text-white" })} // Create icon as a React element
+                icon={React.createElement(icon, { className: "w-5 h-5 text-white" })}
                 color={color}
                 title={title}
                 description={description}
@@ -58,25 +86,22 @@ export function Home() {
           </div>
           <div className="mt-32 flex flex-wrap items-center">
             <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-green-600 p-2 text-center shadow-lg">
-                {/* Placeholder for icon */}
-              </div>
               <Typography variant="h3" className="mb-3 font-bold" color="green">
-                {whoWeAreData.title}
+                {textData.whoWeAre?.title || whoWeAreData.title}
               </Typography>
               <Typography className="mb-20 font-normal text-blue-gray-500">
-                {whoWeAreData.description}
+                {textData.whoWeAre?.content || whoWeAreData.content}
               </Typography>
               <Link to={whoWeAreData.buttonLink}>
                 <Button variant="outlined" className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white focus:ring-gray-200">
-                  {whoWeAreData.buttonText}
+                  {textData.whoWeAre?.buttonText || whoWeAreData.buttonText}
                 </Button>
               </Link>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-5/12 lg:mt-0">
               <Card className="shadow-gray-1000/10 shadow-lg">
                 <CardHeader className="relative h-56 bg-transparent">
-                  <img alt="Card Image" src={whoWeAreData.cardImage} className=" h-30 w-full" />
+                  <img alt="Card Image" src={whoWeAreData.cardImage} className="h-30 w-full" />
                 </CardHeader>
                 <CardBody>
                   <Typography variant="h5" color="blue-gray" className="mb-3 font-bold">
@@ -95,9 +120,11 @@ export function Home() {
       {/* Management Section */}
       <section className="bg-green-50 px-1 pt-20 pb-20">
         <div className="container mx-auto">
-          <PageTitle section={managementData.title} heading={managementData.heading}>
+          <PageTitle section={textData.management?.title || managementData.title} heading={textData.management?.subtitle || managementData.subtitle}>
             <div className="text-center">
-              <p className="text-lg text-gray-700">{managementData.description}</p>
+              <p className="text-lg text-gray-700">
+                {textData.management?.content || managementData.content}
+              </p>
             </div>
           </PageTitle>
           <div className="flex flex-col md:flex-row items-center justify-between my-10">
@@ -106,10 +133,19 @@ export function Home() {
             </div>
             <div className="md:w-2/3 md:ml-10">
               <div className="bg-gradient-to-br from-blue-200 to-blue-500 rounded-lg shadow-lg p-6">
-                <p className="text-lg font-semibold mb-4 text-white">{managementData.ceoMessage.title}</p>
-                <p className="text-gray-100 leading-relaxed">{managementData.ceoMessage.message}</p>
-                <p className="text-gray-100 mt-4">{managementData.ceoMessage.thanks}</p>
-                <p className="text-gray-100 mt-4">{managementData.ceoMessage.ceoName} <br /> {managementData.ceoMessage.ceoPosition}</p>
+                <p className="text-lg font-semibold mb-4 text-white">
+                  {textData.management?.ceoMessage?.title || managementData.ceoMessage.title}
+                </p>
+                <p className="text-gray-100 leading-relaxed">
+                  {textData.management?.ceoMessage?.message || managementData.ceoMessage.message}
+                </p>
+                <p className="text-gray-100 mt-4">
+                  {textData.management?.ceoMessage?.thanks || managementData.ceoMessage.thanks}
+                </p>
+                <p className="text-gray-100 mt-4">
+                  {textData.management?.ceoMessage?.ceoName || managementData.ceoMessage.ceoName} <br />
+                  {textData.management?.ceoMessage?.ceoPosition || managementData.ceoMessage.ceoPosition}
+                </p>
               </div>
             </div>
           </div>
@@ -119,8 +155,8 @@ export function Home() {
       {/* Services Section */}
       <section className="relative bg-gray-100 pt-20 py-3 px-4">
         <div className="container mx-auto">
-          <PageTitle section={servicesData.title} heading={servicesData.heading}>
-            {servicesData.description}
+          <PageTitle section={textData.services?.title || servicesData.title} heading={textData.services?.subtitle || servicesData.subtitle}>
+            {textData.services?.description || servicesData.description}
           </PageTitle>
           <div className="mx-auto mt-20 mb-20 grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
             {contactData.map(({ title, description }) => (

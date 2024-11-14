@@ -86,7 +86,7 @@ Footer.defaultProps = {
     {
       color: "blue",
       name: "facebook",
-      // path: "https://www.facebook.com/CreativeTim",
+      path: "https://m.facebook.com/APSEDEC/",
     },
     {
       color: "light-blue",
